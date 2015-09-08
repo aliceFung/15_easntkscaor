@@ -19,6 +19,7 @@ JC.controller = (function(){
   var scoreClick = function(x,y){
     JC.model.scoreClick(x,y);
     var score = JC.model.getScore();
+    // if (JC.model.increaseBoardSize()){ JC.view.fillClickZone(JC.model.getBoardSize())}
     JC.view.updateScoreDisplay(score);
   };
 

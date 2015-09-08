@@ -6,6 +6,7 @@ JC.model = (function(){
 
   var _activeSquares= [];
   var _score = 0;
+  var _increaseBoardSize = false;
 
   // Randomly generates a pair of coordinates.
 
@@ -37,7 +38,12 @@ JC.model = (function(){
                       // var $scoreSpan = $( "#score" )
                       // score = parseInt( $scoreSpan.text() );
                       _score += ( Math.floor(Math.random() * 15) + 5);
-                      // $scoreSpan.text( score );
+
+                      // //bonus: increment board size
+                      // if (_score % 100 >=1 && !_increaseBoardSize){
+                      //   // JC.controller.increaseBoardSize();
+                      // }
+
                     };
 
   var getScore = function(){
